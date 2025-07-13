@@ -1,0 +1,142 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>ماشین حساب قیمت ارز</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+    <!-- <img src="../img/money.png" alt="" class="money-img" /> -->
+    <h1>ماشین حساب قمیت ارز</h1>
+    <p>برای دریافت نرخ ارز، ارز و مبلغ را انتخاب کنید</p>
+
+    <div class="container">
+      <div class="currency">
+        <select id="price1">
+          <option value="AED">درهم امارات</option>
+          <option value="ARS">پزو آرژانتین</option>
+          <option value="AUD">دلار استرالیا</option>
+          <option value="BGN">لو بلغارستان</option>
+          <option value="BRL">رئال برزیل</option>
+          <option value="BSD">دلار باهاما</option>
+          <option value="CAD"> دلار کانادا</option>
+          <option value="CHF">فرانک سوئیس</option>
+          <option value="CLP">پزو شیلی</option>
+          <option value="CNY">یوان چین</option>
+          <option value="COP">پزو کلمبیا</option>
+          <option value="CZK">کرون چک</option>
+          <option value="DKK">کرون دانمارک</option>
+          <option value="DOP">پزو دومینیکن</option>
+          <option value="EGP">پوند مصر</option>
+          <option value="EUR">یورو</option>
+          <option value="FJD">دلار فیجی</option>
+          <option value="GBP">پوند انگلیس (استرلینگ)</option>
+          <option value="GTQ">کتزال گواتمالا</option>
+          <option value="HKD">دلار هنگ‌کنگ</option>
+          <option value="HRK">کونا کرواسی</option>
+          <option value="HUF">فورینت مجارستان</option>
+          <option value="IDR">روپیه اندونزی</option>
+          <option value="ILS">شقل جدید اسرائیل</option>
+          <option value="INR">روپیه هند</option>
+          <option value="ISK">کرون ایسلند</option>
+          <option value="JPY">ین ژاپن</option>
+          <option value="KRW">وون کره جنوبی</option>
+          <option value="KZT">تنگه قزاقستان</option>
+          <option value="MXN">پزو مکزیک</option>
+          <option value="MYR">رینگیت مالزی</option>
+          <option value="NOK">کرون نروژ</option>
+          <option value="NZD">دلار نیوزیلند</option>
+          <option value="PAB">بالبوآ پاناما</option>
+          <option value="PEN">سول پرو</option>
+          <option value="PHP">پزوی فیلیپین</option>
+          <option value="PKR">روپیه پاکستان</option>
+          <option value="PLN">زلوتی لهستان</option>
+          <option value="PYG">گوارانی پاراگوئه</option>
+          <option value="RON">لئو رومانی</option>
+          <option value="RUB">روبل روسیه</option>
+          <option value="SAR">ریال عربستان</option>
+          <option value="SEK">کرون سوئد</option>
+          <option value="SGD">دلار سنگاپور</option>
+          <option value="THB">بات تایلند</option>
+          <option value="TRY">لیره ترکیه</option>
+          <option value="TWD">دلار تایوان</option>
+          <option value="UAH">گریونا اوکراین</option>
+          <option value="USD" selected>دلار آمریکا</option>
+          <option value="UYU"> پزو اروگوئه</option>
+          <option value="VND">دانگ ویتنام</option>
+          <option value="ZAR">رند آفریقای جنوبی</option>
+        </select>
+        <input type="number" id="number_price1" placeholder="0" value="1" />
+      </div>
+
+      <div class="swap-rate-container">
+        <button class="btn" id="btn">
+          Swap
+        </button>
+        <div class="rate" id="price_daqiq"></div>
+      </div>
+
+      <div class="currency">
+        <select id="price2">
+          <option value="AED">درهم امارات</option>
+          <option value="ARS">پزو آرژانتین</option>
+          <option value="AUD">دلار استرالیا</option>
+          <option value="BGN">لو بلغارستان</option>
+          <option value="BRL">رئال برزیل</option>
+          <option value="BSD">دلار باهاما</option>
+          <option value="CAD"> دلار کانادا</option>
+          <option value="CHF">فرانک سوئیس</option>
+          <option value="CLP">پزو شیلی</option>
+          <option value="CNY">یوان چین</option>
+          <option value="COP">پزو کلمبیا</option>
+          <option value="CZK">کرون چک</option>
+          <option value="DKK">کرون دانمارک</option>
+          <option value="DOP">پزو دومینیکن</option>
+          <option value="EGP">پوند مصر</option>
+          <option value="EUR" selected>یورو</option>
+          <option value="FJD">دلار فیجی</option>
+          <option value="GBP">پوند انگلیس (استرلینگ)</option>
+          <option value="GTQ">کتزال گواتمالا</option>
+          <option value="HKD">دلار هنگ‌کنگ</option>
+          <option value="HRK">کونا کرواسی</option>
+          <option value="HUF">فورینت مجارستان</option>
+          <option value="IDR">روپیه اندونزی</option>
+          <option value="ILS">شقل جدید اسرائیل</option>
+          <option value="INR">روپیه هند</option>
+          <option value="ISK">کرون ایسلند</option>
+          <option value="JPY">ین ژاپن</option>
+          <option value="KRW">وون کره جنوبی</option>
+          <option value="KZT">تنگه قزاقستان</option>
+          <option value="MXN">پزو مکزیک</option>
+          <option value="MYR">رینگیت مالزی</option>
+          <option value="NOK">کرون نروژ</option>
+          <option value="NZD">دلار نیوزیلند</option>
+          <option value="PAB">بالبوآ پاناما</option>
+          <option value="PEN">سول پرو</option>
+          <option value="PHP">پزوی فیلیپین</option>
+          <option value="PKR">روپیه پاکستان</option>
+          <option value="PLN">زلوتی لهستان</option>
+          <option value="PYG">گوارانی پاراگوئه</option>
+          <option value="RON">لئو رومانی</option>
+          <option value="RUB">روبل روسیه</option>
+          <option value="SAR">ریال عربستان</option>
+          <option value="SEK">کرون سوئد</option>
+          <option value="SGD">دلار سنگاپور</option>
+          <option value="THB">بات تایلند</option>
+          <option value="TRY">لیره ترکیه</option>
+          <option value="TWD">دلار تایوان</option>
+          <option value="UAH">گریونا اوکراین</option>
+          <option value="USD">دلار آمریکا</option>
+          <option value="UYU"> پزو اروگوئه</option>
+          <option value="VND">دانگ ویتنام</option>
+          <option value="ZAR">رند آفریقای جنوبی</option>
+        </select>
+        <input type="number" id="number_price2" placeholder="0" />
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    </body>
+</html>
